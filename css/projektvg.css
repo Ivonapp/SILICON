@@ -1,0 +1,202 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Alfa+Slab+One&display=swap');
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+/*FÄRGER LJUSA*/
+:root {
+  /*header colors*/
+  --gradient-hero-color: linear-gradient(182deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.07) 20%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);
+  --gradient-header-color: #ffffff;
+  --darkmode-logo-color: #000000;
+  --primary-body-text-color: #565973;
+  --primary-body-background-color: #ffffff;
+  --primary-header-color: #0B0F19;
+  --primary-purple-button-background-color: #6366F1;
+  --switch-button-color: #9397AD;
+  --button-hover-color: #3d3f91;
+  --primary-button-font-color: #ffffff;
+}
+/*FÄRGER MÖRKA*/
+.dark {
+  color-scheme: dark;
+  /*header colors*/
+  --gradient-hero-color: linear-gradient(180deg, rgba(7, 7, 8, 1) 25%, rgba(12, 12, 31, 1) 57%, rgba(1, 12, 41, 1) 84%);
+  --gradient-header-color: #070708;
+  --darkmode-logo-color: #ffffff;
+  --primary-body-text-color: #ffffff;
+  --primary-body-background-color: #0B0F19;
+  --primary-header-color: #ffffff;
+  --primary-purple-button-background-color: #6366F1;
+  --switch-button-color: #6366F1;
+  --button-hover-color: #3d3f91;
+  --primary-button-font-color: #ffffff;
+}
+.toggle {
+  --_w: 46px;
+  --_h: 24px;
+  width: var(--_w);
+  height: var(--_h);
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.toggle input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--switch-button-color);
+  border-radius: 100vw;
+  box-shadow: inset 0 0 3px #000000;
+  transition: 400ms;
+}
+.toggle .slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 4px #000000;
+  transition: 400ms;
+}
+.toggle input[type="checkbox"]:checked+.slider::before {
+  left: calc(100% - var(--_h));
+}
+.logotype {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.silicontext {
+  font-family: "manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--darkmode-logo-color);
+}
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "manrope", sans-serif;
+  line-height: 1.5;
+  color: var(--primary-body-text-color);
+  background-color: var(--primary-body-background-color);
+}
+h1,h2,h3,h4,h5,h6 {
+  color: var(--primary-header-color);
+  font-family: "manrope", sans-serif;
+}
+.container {
+  max-width: 768px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+.container {
+    max-width: 768px;
+}
+}
+@media (min-width: 1296px) {
+  .container {
+    max-width: 1296px;
+    }
+}
+/* HEADER */
+header {
+  background: var(--gradient-header-color);
+  height: 80px;
+  padding-top: 15px;
+}
+.header-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+@media (min-width: 1296px) {
+.account-icon {
+  display: none;
+  }
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 1296px) {
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+}
+.account, .button, .darkmode {
+  display: none;
+}
+@media (min-width: 1296px) {
+  .darkmode {
+    display: flex;
+  }
+}
+@media (min-width: 1296px) {
+  .account,
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--primary-purple-button-background-color);
+    color: var(--primary-button-font-color);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.15s ease-in-out;
+    height: 40px;
+    width: 140px;
+  }
+}
+@media (min-width: 1296px) {
+  .button:hover,
+  .account:hover {
+    background-color: var(--button-hover-color);
+  }
+}
+@media (min-width: 1296px) {
+  .button-small {
+    height: 36px;
+    width: 140px;
+  }
+}
+@media (min-width: 1296px) {
+  .button-medium {
+  height: 52px;
+  width: 142px;  
+  }
+}
+@media (min-width: 1296px) {
+  .button-large {
+  height: 44px;
+  width: 159px;
+  }
+}
