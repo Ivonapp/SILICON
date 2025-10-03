@@ -4,9 +4,7 @@
   box-sizing: border-box;
   margin: 0;
 }
-/*FÄRGER LJUSA*/
 :root {
-  /*header colors*/
   --gradient-hero-color: linear-gradient(182deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.07) 20%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);
   --gradient-header-color: #ffffff;
   --darkmode-logo-color: #000000;
@@ -17,11 +15,15 @@
   --switch-button-color: #9397AD;
   --button-hover-color: #3d3f91;
   --primary-button-font-color: #ffffff;
+  --black-button-color: #000000;
+  --black-button-text-color: #ffffff;
+  --icon-color: #ffffff;
+  --icon-hamburger-color: #9397AD;
+  --hamburger-font-color: #ffffff;
+
 }
-/*FÄRGER MÖRKA*/
 .dark {
   color-scheme: dark;
-  /*header colors*/
   --gradient-hero-color: linear-gradient(180deg, rgba(7, 7, 8, 1) 25%, rgba(12, 12, 31, 1) 57%, rgba(1, 12, 41, 1) 84%);
   --gradient-header-color: #070708;
   --darkmode-logo-color: #ffffff;
@@ -32,6 +34,12 @@
   --switch-button-color: #6366F1;
   --button-hover-color: #3d3f91;
   --primary-button-font-color: #ffffff;
+  --black-button-color: #F3F6FF;
+  --black-button-text-color: #33354D;
+--icon-color: #000000;
+--icon-hamburger-color: #ffffff;
+--hamburger-font-color: #ffffff;
+
 }
 .toggle {
   --_w: 46px;
@@ -113,7 +121,6 @@ h1,h2,h3,h4,h5,h6 {
     max-width: 1296px;
     }
 }
-/* HEADER */
 header {
   background: var(--gradient-header-color);
   height: 80px;
@@ -123,17 +130,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.account-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-@media (min-width: 1296px) {
-.account-icon {
-  display: none;
-  }
 }
 .actions {
   display: flex;
@@ -199,4 +195,51 @@ header {
   height: 44px;
   width: 159px;
   }
+}
+.account-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+@media (min-width: 1296px) {
+.account-icon {
+  display: none;
+  }
+  .hamburger-icon {
+    display: none;
+  }
+}
+.hamburger-icon {
+  position: relative;
+  width: 70px;
+}
+#myLinks {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary-purple-button-background-color);
+  border-radius: 8px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 80px;
+  z-index: 999;
+}
+#myLinks a {
+  display: block;
+  color: var(--hamburger-font-color);
+  padding: 12px;
+  text-decoration: none;
+}
+#myLinks a:hover {
+  background-color: var(--button-hover-color);
+  border-radius: 8px;
+}
+.icon {
+  cursor: pointer;
+  color: var(--icon-hamburger-color);
+  padding: 12px;
+  font-size: 24px;
+  background-color: var(--icon-color);
+  text-align: left;
 }
