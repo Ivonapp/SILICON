@@ -41,5 +41,19 @@ if(hasDarkmode == null) {
   }
 }
 
+    /*ACCORDION*/
+const accordionItems = document.querySelectorAll('.accordion-item');
+accordionItems.forEach(item => {
+  const trigger = item.querySelector('.accordion-trigger');
+  trigger.addEventListener('click', function(e) {
+    e.preventDefault();
+    accordionItems.forEach(i => {
+      if (i !== item) {
+        i.classList.remove('active');
+      }
+    });
+    item.classList.toggle('active');
+  });
+});
 
 
