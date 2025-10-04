@@ -569,3 +569,134 @@ header {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
   }
 }
+.features {
+  display: flex; 
+  justify-content: center;
+}
+.features-text {
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 400px;
+  margin: 0 auto 30px;
+}
+@media (min-width: 768px) {
+.features-text {
+    width: 706px;
+}
+}
+@media (min-width: 1296px) {
+.features-text {
+    display: flex;
+    margin-left: auto;
+    width: auto;
+    max-width: 1296px;
+    margin-right: 0;
+}
+}
+.features-title {
+    padding-top: 50px;
+    font-size: 40px; 
+    font-weight: 800; 
+} 
+.features-ingress { 
+    padding-top: 20px;
+    font-size: 18px; 
+    font-weight: 400; 
+    color: var(--primary-body-text-light-color); 
+} 
+@media (min-width: 1296px) {
+.features-ingress {
+    padding-left: 500px;
+    text-align: left;
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--primary-body-text-light-color);
+}
+}
+.features-middle-section {
+    display: grid;
+    grid-template-columns: 400px;
+    justify-content: center;
+    gap: 2.5rem;
+}
+@media (min-width: 768px) {
+.features-middle-section {
+    display: grid;
+    grid-template-columns: 360px 360px;
+    justify-content: end; 
+}
+}
+.small-icon {
+  width: 60px;
+  height: 60px;
+}
+.icon-section { 
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    margin-right: 5px;
+    padding: 0; 
+    text-align: left;
+} 
+@media (min-width: 768px) {
+.icon-section { 
+    border: none; 
+    flex-direction: row;
+}
+}
+.text-section { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem;
+} 
+.title { 
+    font-weight: 800; 
+    font-size: 20px; 
+    color: var(--primary-header-color); 
+} 
+.ingress { 
+    font-size: 16px; 
+    font-weight: 400; 
+    color: var(--primary-body-text-color);
+} 
+.features-middle-icons {
+  display: none;
+}
+.cardback, .cardfront {
+  display: none;
+}
+@media (min-width: 768px) {
+.cardback, .cardfront {
+  display: none;
+}
+}
+@media (min-width: 768px) {
+.features-middle-icons { 
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0px 0px 0px 0px; /*top right bottom left*/
+}
+}
+@media (min-width: 1296px) {
+.cardback { 
+    display: flex;
+    position: absolute; 
+    bottom: -30px; 
+    left: -20px; 
+    z-index: 1; 
+} 
+}
+@media (min-width: 1296px) {
+.cardfront { 
+    display: flex;
+    position: absolute; 
+    bottom: 280px; 
+    left: 0px; 
+    z-index: 2; 
+}
+}
