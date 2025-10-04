@@ -17,10 +17,8 @@
   --primary-button-font-color: #ffffff;
   --black-button-color: #000000;
   --black-button-text-color: #ffffff;
-  --icon-color: #ffffff;
   --icon-hamburger-color: #9397AD;
   --hamburger-font-color: #ffffff;
-
 }
 .dark {
   color-scheme: dark;
@@ -36,10 +34,8 @@
   --primary-button-font-color: #ffffff;
   --black-button-color: #F3F6FF;
   --black-button-text-color: #33354D;
---icon-color: #000000;
---icon-hamburger-color: #ffffff;
---hamburger-font-color: #ffffff;
-
+  --icon-hamburger-color: #ffffff;
+  --hamburger-font-color: #ffffff;
 }
 .toggle {
   --_w: 46px;
@@ -240,6 +236,279 @@ header {
   color: var(--icon-hamburger-color);
   padding: 12px;
   font-size: 24px;
-  background-color: var(--icon-color);
+  background-color: var(--gradient-header-color);
   text-align: left;
+}
+.hero-image {
+  display: none;
+}
+.hero-image .mobile-front,
+.hero-image .mobile-back {
+  display: none;
+}
+.hero-image .mobile-front img,
+.hero-image .mobile-back img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 786px) {
+  .hero-image {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  .hero-image .mobile-front,
+  .hero-image .mobile-back {
+    display: block;
+    position: absolute;
+  }
+  .hero-image .mobile-front {
+    width: 243.74px;
+    z-index: 2;
+    bottom: 109%;
+    right: 0%;
+  }
+  .hero-image .mobile-back {
+    width: 239.92px;
+    z-index: 1;
+    bottom: 109%;
+    right: 19%;
+  }
+}
+@media (min-width: 1296px) {
+  .hero-image {
+    display: flex;
+    position: relative;
+    bottom: -5px;
+    left: 0px;
+    width: auto;
+    height: auto;
+  }
+  .hero-image .mobile-front {
+    display: flex;
+    width: auto;
+
+  }
+  .hero-image .mobile-back {
+    display: flex;
+    width: auto;
+  }
+}
+.hero {
+  background: var(--gradient-hero-color);
+  height: 451px;
+}
+@media (min-width: 768px) {
+  .hero {
+  background: var(--gradient-hero-color);
+  height: 618px;
+  }
+}
+@media (min-width: 1296px) {
+  .hero {
+    background: var(--gradient-hero-color);
+    height: 796px;
+  }
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  height: 451px;
+  padding: 40px;
+}
+@media (min-width: 768px) {
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 380px;
+    padding-top: 90px;
+  }
+}
+@media (min-width: 1296px) {
+  .hero-content {
+    width: 526px;
+    text-align: left; 
+    padding-top: 20px;
+  }
+}
+.hero-title-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 1296px) {
+  .hero-title-section {
+    justify-content: flex-start;
+  }
+}
+.hero-title {
+      width: 450px;
+      font-weight: 800;
+      font-size: 50px;
+}
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 44px;
+    width: 442px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1296px) {
+  .hero-title {
+    padding-top: 150px;
+    text-align: left;
+    font-size: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 550px;
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+}
+.hero-ingress {
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 0;
+}
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 400px;
+}
+@media (min-width: 768px) {
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: 120px 120px;
+    justify-content: start;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1296px) {
+  .hero-buttons {
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: 180px 180px;
+  }
+}
+.app-button {
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 366px;
+  height: 50.41px;
+}
+@media (min-width: 768px) {
+  .app-button {
+    height: 40px;
+  }
+}
+@media (min-width: 1296px) {
+  .app-button {
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    width: 180px;
+    height: 52px;
+  }
+}
+.app-button,.btn-area {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "icon text"
+    "icon store";
+  background-color: var(--black-button-color);
+  color: var(--black-button-text-color);
+  column-gap: 0.5rem;
+  text-align: left;
+}
+@media (min-width: 1296px) {
+  .app-button .btn-area {
+    column-gap: 1rem;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+}
+.download-on-the {
+  margin-top: 10px;
+  grid-area: text;
+  font-size: 11px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .download-on-the {
+    margin-top: 0;
+    font-size: 9px;
+  }
+}
+@media (min-width: 1296px) {
+  .download-on-the {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+}
+.appstore-logo {
+  grid-area: icon;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .appstore-logo {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1296px) {
+  .appstore-logo {
+    font-size: 2rem;
+  }
+}
+.googleplay-logo {
+  grid-area: icon;
+  width: 30px;
+  height: auto;
+}
+@media (min-width: 768px) {
+    .googleplay-logo {
+    width: 25px;
+    padding-left: 5px;
+  }
+}
+@media (min-width: 1296px) {
+  .googleplay-logo {
+    width: 30px;
+    padding: 0;
+  }
+}
+.app-store {
+  grid-area: store;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .app-store {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1296px) {
+  .app-store {
+  font-size: 16px;
+  }
 }
