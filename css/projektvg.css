@@ -25,6 +25,8 @@
   --how-it-works-mobile-color: #F3F6FF;
   --how-it-works-mobile-background-color: #585C7B;
   --how-it-works-background-color: #565973;
+  --testimonials-background-color: #F3F6FF;
+  --testimonials-box-color: #ffffff;
 }
 .dark {
   color-scheme: dark;
@@ -48,6 +50,8 @@
   --how-it-works-mobile-color: #1C2029;
   --how-it-works-mobile-background-color: #585C7B;
   --how-it-works-background-color: #0B0F19;
+  --testimonials-background-color: #0C0F1A;
+  --testimonials-box-color: #151822;
 }
 .toggle {
   --_w: 46px;
@@ -897,8 +901,6 @@ display: none;
   max-width: 636px;
 }
 }
-
-/*APP FEATURES*/
 .features-alignment2 {
   display: none;
 }
@@ -1124,3 +1126,90 @@ display: none;
   position: relative;
 }
 }
+.text-sections, .customerfannie, .customeralbert, .fannie-text, .albert-text,
+.fannie-quote-position, .albert-quote-position, .albert-title, .fannie-title,
+.testimonials-wrapper, .testimonials-title, .testimonials, .box-wrapper,
+.testimonial-box, .fannie-stars, .albert-stars {
+  display: none;
+}
+@media (min-width: 1296px) {
+.testimonials {
+  display: block;
+  background-color: var(--testimonials-background-color);
+}
+.testimonials-wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1296px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.testimonials-title {
+  display: flex; 
+  text-align: left;
+  font-size: 40px;
+  font-weight: 800;
+}
+.box-wrapper {
+  display: flex;
+  margin-left: auto;
+  gap: 2rem;
+  width: 860px;
+  height: 330px;
+}
+.testimonial-box {
+  display: flex;
+  position: relative; 
+  width: 420px;
+  height: 330px;
+  border-radius: 8px;
+  background-color: var(--testimonials-box-color);
+  flex-direction: column;
+  align-items: flex-start;
+}
+.albert-title, .fannie-title {
+  display: block;
+  color: var(--primary-header-color);
+  font-size: 16px;
+  font-weight: 800;
+}
+.fannie-quote-position, .albert-quote-position {
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+.fannie-stars, .albert-stars {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  gap: 5px;
+}
+.fannie-text, .albert-text {
+  display: block;
+  margin-top: 90px; 
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+  padding-left: 30px;
+}
+.customerfannie, .customeralbert {
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+.customerfannie .text-sections, .customeralbert .text-sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+}
+
