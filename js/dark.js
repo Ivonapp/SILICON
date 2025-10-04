@@ -31,9 +31,6 @@ if(hasDarkmode == null) {
 
     }
 
-
-
-
 /*Hamburger-menu*/
     function myFunction() {
   var x = document.getElementById("myLinks");

@@ -298,7 +298,7 @@ header {
 }
 .hero {
   background: var(--gradient-hero-color);
-  height: 451px;
+  height: 558px;
 }
 @media (min-width: 768px) {
   .hero {
