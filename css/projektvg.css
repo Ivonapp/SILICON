@@ -20,6 +20,11 @@
   --icon-hamburger-color: #9397AD;
   --hamburger-font-color: #ffffff;
   --gray-border-color: #E2E5F1;
+  --primary-body-text-light-color: #9397AD;
+  --primary-header-color: #0B0F19;
+  --how-it-works-mobile-color: #F3F6FF;
+  --how-it-works-mobile-background-color: #585C7B;
+  --how-it-works-background-color: #565973;
 }
 .dark {
   color-scheme: dark;
@@ -38,6 +43,11 @@
   --icon-hamburger-color: #ffffff;
   --hamburger-font-color: #ffffff;
   --gray-border-color: #2F333B;
+  --primary-body-text-light-color: #9397AD;
+  --primary-header-color: #ffffff;
+  --how-it-works-mobile-color: #1C2029;
+  --how-it-works-mobile-background-color: #585C7B;
+  --how-it-works-background-color: #0B0F19;
 }
 .toggle {
   --_w: 46px;
@@ -662,7 +672,7 @@ header {
     font-size: 16px; 
     font-weight: 400; 
     color: var(--primary-body-text-color);
-} 
+}
 .features-middle-icons {
   display: none;
 }
@@ -698,5 +708,192 @@ header {
     bottom: 280px; 
     left: 0px; 
     z-index: 2; 
+}
+}
+.phone-icon1 {
+  display: none;
+}
+@media (min-width: 768px) {
+.phone-icon1 {
+  display: flex;
+  width: 203px; 
+  height: 410px;
+}
+}
+@media (min-width: 1296px) {
+.phone-icon1 {
+  display: flex;
+  width: auto; 
+  height: auto;
+}
+}
+.phone-icon2 {
+  width: 270px;
+  height: 545px;
+}
+@media (min-width: 768px) {
+.phone-icon2 {
+  display: flex;
+  width: 203px; 
+  height: 410px;
+}
+}
+@media (min-width: 1296px) {
+.phone-icon2 {
+  display: flex;
+  width: auto; 
+  height: auto;
+}
+}
+.phone-icon3 {
+  display: none;
+}
+@media (min-width: 768px) {
+.phone-icon3 {
+  display: flex;
+  width: 203px; 
+  height: 410px;
+}
+}
+@media (min-width: 1296px) {
+.phone-icon3 {
+  display: flex;
+  width: auto; 
+  height: auto;
+}
+}
+.how-it-works-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+.how-it-works-desktop {
+display: none;
+}
+}
+@media (min-width: 1296px) {
+.how-it-works-desktop {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+}
+.how-it-works-tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+.how-it-works-tablet {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  color: var(--primary-header-color);
+}
+}
+@media (min-width: 1296px) {
+.how-it-works-tablet {
+  display: none;
+}
+}
+.how-it-works {
+  background-color: var(--how-it-works-mobile-color);
+  margin-top: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+.how-it-works {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+}
+@media (min-width: 1296px) {
+.how-it-works {
+  display: flex;
+  justify-content: center; 
+  background-color: var(--how-it-works-background-color);
+}
+}
+.how-it-works-title {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--darkmode-logo-color);
+  margin-bottom: 20px;
+}
+.how-it-works-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+@media (min-width: 1296px) {
+.how-it-works-icons {
+  display: flex;
+  justify-content: center;
+  padding: 40px; 
+  gap: 80px; 
+}
+}
+.how-it-works-mobile {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--primary-header-color);
+}
+@media (min-width: 768px) {
+  .how-it-works-mobile {
+  display: none;
+  }
+}
+@media (min-width: 1296px) {
+  .how-it-works-mobile {
+  display: none;
+  }
+}
+.rubrik2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  font-weight: 800;
+  font-size: 21.6px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+.rubrik2 {
+  display: flex;
+  max-width: 500px;
+  font-size: 22.7px;
+}
+}
+@media (min-width: 1296px) {
+.rubrik2 {
+  display: flex;
+ font-size: 24px;
+}
+}
+.ingress2 {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 370px;
+    color: var(--how-it-works-mobile-background-color);
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+.ingress2 {
+  display: flex;
+  max-width: 450px;
+}
+}
+@media (min-width: 1296px) {
+.ingress2 {
+  display: flex;
+  color: var(--primary-header-color);
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 636px;
 }
 }
