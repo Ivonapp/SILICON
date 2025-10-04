@@ -64,7 +64,6 @@
   --green-color: #22C55E;
   --primary-gray-background-color: #151822;
   --search-box-border-color: #D4D7E5;
-
 }
 .toggle {
   --_w: 46px;
@@ -1634,5 +1633,15 @@ flex-direction: column;
   display: flex;
   gap: 10px;
 }
+footer {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100px;
+text-align: center;
+color: var(--primary-body-text-light-color);
+font-size: 14px;
+}
+
 
 
